@@ -1,0 +1,1 @@
+SELECT * FROM [dbo].[TBL_BOOKING] WHERE [B_ID]=@B_ID

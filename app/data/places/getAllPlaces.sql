@@ -1,0 +1,1 @@
+SELECT * FROM [dbo].[MST_PLACE] 

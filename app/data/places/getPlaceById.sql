@@ -1,0 +1,1 @@
+SELECT * FROM [dbo].[MST_PLACE] WHERE [P_ID]=@P_ID

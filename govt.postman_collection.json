@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "dce05be1-6385-435d-9249-1b4af449d12d",
+		"name": "govt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15236431"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"ssoId\":\"ss12345678\",\n        \"password\":\"123455678\",\n        \"name\": \"test\",\n        \"contactNo\":\"637829278323\",\n        \"emailId\": \"test@test.com\"\n\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/create",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ssoId\":\"ss1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ssoId\":\"ss1\",\n    \"password\":\"123455678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ssoId\":\"ss1\",\n    \"placeId\":\"001234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/update",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "place",
+			"item": [
+				{
+					"name": "create place",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n     {   \n        \"placeId\": \"001234\",\n        \"nodalDepartment\": \"nodalDepartment1\",\n        \"touristPlaceType\": \"touristPlaceType1\",\n        \"city\": \"city\",\n        \"address\": \"address\",\n        \"placeName\":\"placeName\",\n        \"place_coordinate_longitude\": \"16.876778\",\n        \"place_coordinate_latitude\": \"16.876778\",\n        \"siteImageUrl\": \"1.png\",\n        \"ticketImageUrl\":\"2.png\",\n        \"status\":true\n       }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/place/create",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"place",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by placeId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"placeId\":\"001234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/place",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All places",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/place/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"place",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "active place",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"placeId\":\"001234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/place/active",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"place",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inactive place",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"placeId\":\"001234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/place/inactive",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"place",
+								"inactive"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "create account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"accountType\":\"Current\",\n        \"accountName\":\"1234567890123456\",\n        \"bankName\":\"bankName\",\n        \"accountNo\":\"accountNo\",\n        \"ifscCode\":\"ifscCode\",\n        \"branch\":\"branch\",\n        \"indCitizen\":200,\n        \"indStudent\":100,\n        \"foreignCitizen\":500,\n        \"foreignStudent\":250,\n        \"placeId\":\"001234\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/account/create",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"account",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "create ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {    \"date\":\"2023-01-12T23:35:53.000Z\",\n        \"indianCitizenNo\":2,\n        \"foreignCitizenNo\":2,\n        \"indianStudentNo\":2,\n        \"foreignStudentNo\":2,\n        \"mobileNo\":\"546787654356\",\n        \"email\":\"a@a.com\",\n        \"amount\":300,\n        \"status\":true\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/ticket/create",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"ticket",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/ticket",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
